@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tharuni PGs - Premium Accommodation in Bangalore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="animated-bg">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="logo">🏠 THARUNI PGs</div>
+      <nav class="nav-links">
+        <a onclick="scrollToSection('hero')">Home</a>
+        <a onclick="scrollToSection('listings')">Listings</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+        <a onclick="scrollToSection('feedback')">Feedback</a>
+      </nav>
+      <div class="rating">
+        <span>⭐⭐⭐⭐⭐</span>
+        <span>4.8 (50+ Reviews)</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="offer-banner">
+    <marquee class="offer-text">
+      🎉 LIMITED TIME OFFER: ₹1000 DISCOUNT ON FIRST MONTH ONLY! + ₹500 REFERRAL BONUS 🏠 Your Dream Home Awaits - Premium PGs in Bangalore 🌟 Safe, Secure & Affordable Housing Near Top Universities 💼
+    </marquee>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Find Your Perfect Home in Bangalore</h1>
+        <p>Premium PGs with Unmatched Comfort, Safety & Community</p>
+        
+        <div class="type-selector">
+          <button class="type-btn type-btn-all active" onclick="filterPGs('all')">All PGs</button>
+          <button class="type-btn type-btn-boys" onclick="filterPGs('boys')">Boys PG</button>
+          <button class="type-btn type-btn-girls" onclick="filterPGs('girls')">Girls PG</button>
+          <button class="type-btn type-btn-coliving" onclick="filterPGs('coliving')">Co-Living</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="listings" class="container">
+    <div class="pg-container" id="pgContainer">
+      <!-- Co-Living PG -->
+      <div class="pg-card coliving-card" data-type="coliving">
+        <div class="pg-header coliving">
+          <div class="pg-badge">CO-LIVING</div>
+          <h2 class="pg-title">Tharuni     Co-Living</h2>
+        </div>
+        <div class="pg-body">
+          <div class="pg-location">
+            <span class="location-icon">📍</span>
+            <div class="location-info">
+              <p><strong>Vinayaka Nagar, Bangalore</strong></p>
+              <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Near REVA University & IT Hubs | Metro Nearby</p>
+              <a onclick="openMaps('Vinayaka Nagar near REVA University Bangalore')">View on Maps 🗺️</a>
+            </div>
+          </div>
+
+
+          <div class="room-showcase">
+            <h4>🏠 ROOM TYPES & PRICING</h4>
+            <div class="room-buttons">
+              <button class="room-btn" onclick="openRoomModal('coliving', '1share')">1-Share ₹14,000</button>
+              <button class="room-btn" onclick="openRoomModal('coliving', '2share')">2-Share ₹8,000</button>
+              <button class="room-btn" onclick="openRoomModal('coliving', '3share')">3-Share ₹6,500</button>
+            </div>
+          </div>
+
+          <div class="amenities">
+            <h4>✨ PREMIUM FACILITIES</h4>
+
+            <div class="amenity-item">🧊 Mini Fridge </div>
+            <div class="amenity-item">🎯 Carrom & Foosball</div>
+            <div class="amenity-item">🧹 Daily Cleaning</div>
+            <div class="amenity-item">📶 High-Speed WiFi</div>
+            <div class="amenity-item">🔒 24/7 CCTV & Security</div>
+            <div class="amenity-item">🏍️ Bike Parking</div>
+            <div class="amenity-item">🍽️ 3 Meals Daily</div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-explore" onclick="viewDetails('coliving')">Explore More</button>
+            <button class="btn btn-contact" onclick="scrollToContact('coliving')">Contact</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boys PG -->
+      <div class="pg-card boys-card" data-type="boys">
+        <div class="pg-header boys">
+          <div class="pg-badge">BOYS ONLY</div>
+          <h2 class="pg-title">Tharuni Boys PG</h2>
+        </div>
+        <div class="pg-body">
+          <div class="pg-location">
+            <span class="location-icon">📍</span>
+            <div class="location-info">
+              <p><strong>Byappanahalli, Bangalore</strong></p>
+              <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Near CMR College | Secure Location</p>
+              <a onclick="openMaps('Byappanahalli near CMR College Bangalore')">View on Maps 🗺️</a>
+            </div>
+          </div>
+
+
+          <div class="room-showcase">
+            <h4>🏠 ROOM TYPES & PRICING</h4>
+            <div class="room-buttons">
+              <button class="room-btn" onclick="openRoomModal('boys', '1share')">1-Share ₹13,000</button>
+              <button class="room-btn" onclick="openRoomModal('boys', '2share')">2-Share ₹8,000</button>
+              <button class="room-btn" onclick="openRoomModal('boys', '3share')">3-Share ₹7,000</button>
+              <button class="room-btn" onclick="openRoomModal('boys', '4share')">4-Share ₹6,000</button>
+            </div>
+          </div>
+
+          <div class="amenities">
+            <h4>✨ PREMIUM FACILITIES</h4>
+            <div class="amenity-item">📚 Study Room</div>
+            <div class="amenity-item">🧹 Daily Housekeeping</div>
+            <div class="amenity-item">🔒 Biometric Security</div>
+            <div class="amenity-item">📱 High-Speed Internet</div>
+            <div class="amenity-item">🧺 Washing Machine</div>
+            <div class="amenity-item">🍽️ 3 Meals Daily</div>
+            <div class="amenity-item">🏍️ Bike Parking</div>
+            <div class="amenity-item">📺 Common TV Room</div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-explore" onclick="viewDetails('boys')">Explore More</button>
+            <button class="btn btn-contact" onclick="scrollToContact('boys')">Contact</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Girls PG -->
+      <div class="pg-card girls-card" data-type="girls">
+        <div class="pg-header girls">
+          <div class="pg-badge">GIRLS ONLY</div>
+          <h2 class="pg-title">Tharuni Girls PG</h2>
+        </div>
+        <div class="pg-body">
+          <div class="pg-location">
+            <span class="location-icon">📍</span>
+            <div class="location-info">
+              <p><strong>JP Nagar, Bangalore</strong></p>
+              <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Bilekahalhali 560076 | Safe & Secure</p>
+              <a onclick="openMaps('JP Nagar Bilekahalhali 560076 Bangalore')">View on Maps 🗺️</a>
+            </div>
+          </div>
+
+          <div class="room-showcase">
+            <h4>🏠 ROOM TYPES & PRICING</h4>
+            <div class="room-buttons">
+              <button class="room-btn" onclick="openRoomModal('girls', '1share')">1-Share ₹13,000</button>
+              <button class="room-btn" onclick="openRoomModal('girls', '2share')">2-Share ₹8,000</button>
+              <button class="room-btn" onclick="openRoomModal('girls', '3share')">3-Share ₹7,000</button>
+              <button class="room-btn" onclick="openRoomModal('girls', '4share')">4-Share ₹6,000</button>
+            </div>
+          </div>
+
+          <div class="amenities">
+            <h4>✨ PREMIUM FACILITIES</h4>
+            <div class="amenity-item">👩‍⚕️ Warden on Duty</div>
+            <div class="amenity-item">🧹 Daily Cleaning</div>
+            <div class="amenity-item">🔒 Biometric Entry</div>
+            <div class="amenity-item">📱 High-Speed WiFi</div>
+            <div class="amenity-item">🍽️ 3 Meals Daily</div>
+            <div class="amenity-item">🧺 Washing Machine</div>
+            <div class="amenity-item">👥 Female Security</div>
+            <div class="amenity-item">🎮 Recreation Room</div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-explore" onclick="viewDetails('girls')">Explore More</button>
+            <button class="btn btn-contact" onclick="scrollToContact('girls')">Contact</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room Modal -->
+  <div class="room-modal" id="roomModal">
+    <div class="room-modal-content">
+      <button class="modal-close" onclick="closeRoomModal()">✕</button>
+      <div class="room-modal-body" id="roomModalBody"></div>
+    </div>
+  </div>
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch with Us</h2>
+      
+      <div class="contact-cards">
+        <!-- Co-Living Contact -->
+        <div class="contact-card" id="contact-coliving">
+          <h3>Tharuni Co-Living</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>📱 Phone</strong>
+              <p><a href="tel:+919036561066">+91 9036561066</a></p>
+            </div>
+            <div class="contact-item">
+              <strong>📍 Address</strong>
+              <p>Vinayaka Nagar, Bangalore<br>Near REVA University</p>
+            </div>
+            <div class="contact-item">
+              <strong>🕒 Hours</strong>
+              <p>24/7 Open</p>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <button class="btn-call" onclick="callPhone('9036561066')">📞 Call Now</button>
+            <button class="btn-location" onclick="openMaps('Vinayaka Nagar near REVA University Bangalore')">🗺️ Location</button>
+          </div>
+        </div>
+
+        <!-- Boys Contact -->
+        <div class="contact-card" id="contact-boys">
+          <h3>Tharuni Boys PG</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>📱 Phone</strong>
+              <p><a href="tel:+919845864799">+91 9845 86799</a></p>
+            </div>
+            <div class="contact-item">
+              <strong>📍 Address</strong>
+              <p>Byappanahalli, Bangalore<br>Near CMR College</p>
+            </div>
+            <div class="contact-item">
+              <strong>🕒 Hours</strong>
+              <p>24/7 Open</p>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <button class="btn-call" onclick="callPhone('9845864799')">📞 Call Now</button>
+            <button class="btn-location" onclick="openMaps('Byappanahalli near CMR College Bangalore')">🗺️ Location</button>
+          </div>
+        </div>
+
+        <!-- Girls Contact -->
+        <div class="contact-card" id="contact-girls">
+          <h3>Tharuni Girls PG</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>📱 Phone</strong>
+              <p><a href="tel:+9198765432012">+91 987*5 4*212</a></p>
+            </div>
+            <div class="contact-item">
+              <strong>📍 Address</strong>
+              <p>JP Nagar, Bilekahalhali<br>Bangalore 560076</p>
+            </div>
+            <div class="contact-item">
+              <strong>🕒 Hours</strong>
+              <p>24/7 Open</p>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <button class="btn-call" onclick="callPhone('9876543212')">📞 Call Now</button>
+            <button class="btn-location" onclick="openMaps('JP Nagar Bilekahalhali 560076 Bangalore')">🗺️ Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="feedback-section" id="feedback">
+    <div class="container">
+      <h2 class="section-title">Share Your Feedback</h2>
+      
+      <div class="feedback-container">
+        <div class="feedback-form">
+          <h3>We Value Your Opinion</h3>
+          <form onsubmit="handleFeedbackSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXXXXXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="pgType">Which PG? *</label>
+              <select id="pgType" name="pgType" required>
+                <option value="">Select PG</option>
+                <option value="coliving">Tharuni Co-Living</option>
+                <option value="boys">Tharuni Boys PG</option>
+                <option value="girls">Tharuni Girls PG</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="feedbackType">Feedback Type *</label>
+              <select id="feedbackType" name="feedbackType" required>
+                <option value="">Select Type</option>
+                <option value="complaint">Complaint/Issue</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="praise">Praise</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" required placeholder="Please share your feedback or complaint..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Feedback</button>
+          </form>
+        </div>
+
+        <div class="feedback-info">
+          <div class="feedback-card">
+            <h4>🎯 Why Feedback Matters</h4>
+            <p>Your feedback helps us improve our services and ensure every resident has the best living experience possible.</p>
+          </div>
+
+          <div class="feedback-card">
+            <h4>⚡ Quick Resolution</h4>
+            <p>We address all complaints within 24 hours and work towards immediate solutions for any issues.</p>
+          </div>
+
+          <div class="feedback-card">
+            <h4>🤝 Community Focus</h4>
+            <p>We listen to our residents and continuously improve facilities, management, and services based on feedback.</p>
+          </div>
+
+          <div class="feedback-card">
+            <h4>📞 Support Available</h4>
+            <p>For urgent issues, call us directly or submit feedback through this form. We're here 24/7 to help.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Tharuni PGs - Premium Accommodation in Bangalore | All Rights Reserved</p>
+    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Safe • Secure • Affordable • Community-Focused</p>
+     <script src="script.js"></script>
+  </footer>
